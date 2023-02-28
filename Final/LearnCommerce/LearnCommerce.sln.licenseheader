@@ -1,0 +1,32 @@
+extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+/*
+ * Copyright (c) Learn MS NET, All Rights Reserved.
+ * Author: Sam MacDonald - omacdon@learnmsnet.com
+ * Created: %CreationMonth%/%CreationDay%/%CreationYear%
+ * Modified: %CurrentMonth%/%CurrentDay%/%CurrentYear%
+ */
+
+extensions: .aspx .ascx
+<%--
+Copyright (c) Learn MS NET, All Rights Reserved.
+Author: Sam MacDonald - omacdon@learnmsnet.com
+Created: %CreationMonth%/%CreationDay%/%CreationYear%
+Modified: %CurrentMonth%/%CurrentDay%/%CurrentYear%
+--%>
+
+extensions: .cshtml
+@*
+ * Copyright (c) Learn MS NET, All Rights Reserved.
+ * Author: Sam MacDonald - omacdon@learnmsnet.com
+ * Created: %CreationMonth%/%CreationDay%/%CreationYear%
+ * Modified: %CurrentMonth%/%CurrentDay%/%CurrentYear%
+ *@
+
+extensions:  .xml .config .xsd
+<!--
+	Copyright (c) Learn MS NET, All Rights Reserved.
+	Author: Sam MacDonald - omacdon@learnmsnet.com
+	Created: %CreationMonth%/%CreationDay%/%CreationYear%
+	Modified: %CurrentMonth%/%CurrentDay%/%CurrentYear%
+-->
