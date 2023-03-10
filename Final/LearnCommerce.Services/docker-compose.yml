@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+
+  maildev:
+    image: maildev/maildev:latest
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  redis:
+    image: redis:alpine
+
+  seq:
+    image: datalust/seq:latest
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest 
+  
+  identity-api:
+    image: ${DOCKER_REGISTRY-}learncommerceservicesidentityapi
+    build:
+      context: .
+      dockerfile: src/Services/Identity/LearnCommerce.Services.Identity.API/Dockerfile
+  
+  web:
+    image: ${DOCKER_REGISTRY-}learncommerceweb
+    build:
+      context: .
+      dockerfile: src/Web/LearnCommerce.Web/Dockerfile
+
+
+

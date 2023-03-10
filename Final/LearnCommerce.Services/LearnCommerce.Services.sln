@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33417.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnCommerce.Web", "LearnCommerce.Web\LearnCommerce.Web.csproj", "{23DA6AF8-1F12-47F3-83D9-6DF35597A488}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EC287A-F47F-4483-81C0-F03544CAA048}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{AEC7130F-0B3D-4FFA-AFC3-7411D58F7D9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnCommerce.Web", "src\Web\LearnCommerce.Web\LearnCommerce.Web.csproj", "{73D67A30-03F6-4DAF-8865-0C3B70AF90E1}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CAB90500-F9EB-4FFE-984B-8EEFFEFB53EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D03A317A-A8A4-4F3E-AA4E-4BC2A4DB2951}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{CD280415-F2FC-4863-9AE0-825871896C22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnCommerce.Services.Identity.API", "src\Services\Identity\LearnCommerce.Services.Identity.API\LearnCommerce.Services.Identity.API.csproj", "{7D3E9C99-741F-4727-B063-5D4C46D7A234}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +23,28 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{23DA6AF8-1F12-47F3-83D9-6DF35597A488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23DA6AF8-1F12-47F3-83D9-6DF35597A488}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23DA6AF8-1F12-47F3-83D9-6DF35597A488}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23DA6AF8-1F12-47F3-83D9-6DF35597A488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D67A30-03F6-4DAF-8865-0C3B70AF90E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D67A30-03F6-4DAF-8865-0C3B70AF90E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D67A30-03F6-4DAF-8865-0C3B70AF90E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D67A30-03F6-4DAF-8865-0C3B70AF90E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB90500-F9EB-4FFE-984B-8EEFFEFB53EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB90500-F9EB-4FFE-984B-8EEFFEFB53EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB90500-F9EB-4FFE-984B-8EEFFEFB53EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB90500-F9EB-4FFE-984B-8EEFFEFB53EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D3E9C99-741F-4727-B063-5D4C46D7A234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3E9C99-741F-4727-B063-5D4C46D7A234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3E9C99-741F-4727-B063-5D4C46D7A234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3E9C99-741F-4727-B063-5D4C46D7A234}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AEC7130F-0B3D-4FFA-AFC3-7411D58F7D9F} = {02EC287A-F47F-4483-81C0-F03544CAA048}
+		{73D67A30-03F6-4DAF-8865-0C3B70AF90E1} = {AEC7130F-0B3D-4FFA-AFC3-7411D58F7D9F}
+		{D03A317A-A8A4-4F3E-AA4E-4BC2A4DB2951} = {02EC287A-F47F-4483-81C0-F03544CAA048}
+		{CD280415-F2FC-4863-9AE0-825871896C22} = {D03A317A-A8A4-4F3E-AA4E-4BC2A4DB2951}
+		{7D3E9C99-741F-4727-B063-5D4C46D7A234} = {CD280415-F2FC-4863-9AE0-825871896C22}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB5499EF-0BFD-4FFC-AE2F-A83CEBD24FB7}
