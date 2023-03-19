@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:LearnCommerce.Controls"
+             xmlns:res="clr-namespace:LearnCommerce.Resources.Strings"
              x:Class="LearnCommerce.Pages.HomePage"
-             Title="HomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="{x:Static res:AppResources.BrandName}">
+    <Shell.SearchHandler>
+        <controls:ProductSearchHandler Placeholder="{x:Static res:AppResources.Home_EnterSearchTerm}"
+                                       ShowsResults="True">
+            <controls:ProductSearchHandler.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Name}"
+                           Style="{StaticResource MediumSecondaryLabelStyle}"
+                           VerticalTextAlignment="Center"
+                           Padding="10" />
+                </DataTemplate>
+            </controls:ProductSearchHandler.ItemTemplate>
+        </controls:ProductSearchHandler>
+    </Shell.SearchHandler>
 </ContentPage>

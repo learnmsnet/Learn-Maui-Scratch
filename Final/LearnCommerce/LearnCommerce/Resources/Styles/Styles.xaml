@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <?xaml-comp compile="true" ?>
-<ResourceDictionary 
+<ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
@@ -13,10 +13,17 @@
         <Setter Property="SelectedIndicatorColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray100}}"/>
     </Style>
 
-    <Style TargetType="Border">
+    <Style TargetType="Border"
+           x:Key="BaseBorder">
         <Setter Property="Stroke" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
         <Setter Property="StrokeShape" Value="Rectangle"/>
         <Setter Property="StrokeThickness" Value="1"/>
+    </Style>
+
+    <Style TargetType="Border"
+           BasedOn="{StaticResource BaseBorder}"
+           x:Key="RoundRectangleBorder">
+        <Setter Property="StrokeShape" Value="RoundRectangle 7" />
     </Style>
 
     <Style TargetType="BoxView">
@@ -157,10 +164,11 @@
         </Setter>
     </Style>
 
-    <Style TargetType="Label">
+    <Style TargetType="Label"
+           x:Key="BaseLabel">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontFamily" Value="NunitoSansRegular" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
@@ -174,6 +182,26 @@
                 </VisualStateGroup>
             </VisualStateGroupList>
         </Setter>
+    </Style>
+
+    <Style x:Key="PrimaryLabelStyle"
+           TargetType="Label"
+           BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="TextColor"
+                Value="{AppThemeBinding Light={StaticResource PrimaryTextColorLight},
+                        Dark={StaticResource PrimaryTextColorDark}}" />
+    </Style>
+
+    <Style x:Key="TitlePrimaryLabelStyle"
+           TargetType="Label"
+           BasedOn="{StaticResource PrimaryLabelStyle}">
+        <Setter Property="FontSize" Value="Title" />
+    </Style>
+
+    <Style x:Key="BoldTitlePrimaryLabelStyle"
+           TargetType="Label"
+           BasedOn="{StaticResource TitlePrimaryLabelStyle}">
+        <Setter Property="FontAttributes" Value="Bold" />
     </Style>
 
     <Style TargetType="ListView">

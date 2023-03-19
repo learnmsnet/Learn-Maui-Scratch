@@ -1,12 +1,68 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:LearnCommerce.Controls"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:handlers="clr-namespace:LearnCommerce.Handlers"
+             xmlns:viewmodels="clr-namespace:LearnCommerce.ViewModels"
+             xmlns:res="clr-namespace:LearnCommerce.Resources.Strings"
              x:Class="LearnCommerce.Pages.LoginPage"
-             Title="LoginPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             ios:Page.UseSafeArea="true"
+             x:DataType="viewmodels:LoginViewModel"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+
+    <Grid>
+        <Grid x:Name="LoginPanel"
+              IsVisible="{Binding IsMock}"
+              Padding="0"
+              ColumnSpacing="0"
+              RowSpacing="0"
+              RowDefinitions="*,Auto">
+            <ScrollView Grid.RowSpan="2">
+                <StackLayout Padding="30"
+                             Spacing="10">
+                    <Image HeightRequest="60"
+                           HorizontalOptions="Center"
+                           Source="logo.png" />
+                    <ContentView HeightRequest="10" />
+                    <Label Text="{x:Static res:AppResources.Login_Welcome}"
+                           Style="{StaticResource BoldTitlePrimaryLabelStyle}"
+                           HorizontalTextAlignment="Center" />
+                    <Border Style="{StaticResource RoundRectangleBorder}"
+                            Padding="10,0">
+                        <handlers:BorderlessEntry Text="{Binding UserName.Value, Mode=TwoWay}"
+                                                  x:Name="txtUserName"
+                                                  Placeholder="{x:Static res:AppResources.Login_UserName}"
+                                                  Margin="3" />
+                    </Border>
+                    <Border Style="{StaticResource RoundRectangleBorder}"
+                            Padding="10,0">
+                        <controls:PasswordToggleEntry Placeholder="{x:Static res:AppResources.Login_Password}"
+                              Text="{Binding Password.Value, Mode=TwoWay}"
+                              HidePassword="True"
+                              VerticalOptions="Center" />
+                    </Border>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+        <Grid ColumnSpacing="0"
+              RowSpacing="0"
+              IsVisible="{Binding IsMock, Converter={StaticResource InvertedBoolConverter}}">
+
+        </Grid>
+        <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           IsVisible="{Binding IsBusy}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Color="{StaticResource Secondary}">
+            <ActivityIndicator.WidthRequest>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <On Platform="iOS, Android" Value="100" />
+                    <On Platform="WinUI, MacCatalyst" Value="400" />
+                </OnPlatform>
+            </ActivityIndicator.WidthRequest>
+        </ActivityIndicator>
+    </Grid>
 </ContentPage>

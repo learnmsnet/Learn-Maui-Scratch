@@ -25,5 +25,9 @@
             Route="MainPage" />
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Route="Settings">
+        <ShellContent Title="Settings"
+                      ContentTemplate="{DataTemplate pages:SettingsPage}" />
 
+    </FlyoutItem>
 </Shell>

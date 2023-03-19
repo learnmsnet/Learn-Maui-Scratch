@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <?xaml-comp compile="true" ?>
-<ResourceDictionary 
+<ResourceDictionary
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Color x:Key="Primary">#512BD4</Color>
-    <Color x:Key="Secondary">#DFD8F7</Color>
-    <Color x:Key="Tertiary">#2B0B98</Color>
-    <Color x:Key="White">White</Color>
-    <Color x:Key="Black">Black</Color>
-    <Color x:Key="Gray100">#E1E1E1</Color>
-    <Color x:Key="Gray200">#C8C8C8</Color>
-    <Color x:Key="Gray300">#ACACAC</Color>
-    <Color x:Key="Gray400">#919191</Color>
-    <Color x:Key="Gray500">#6E6E6E</Color>
-    <Color x:Key="Gray600">#404040</Color>
-    <Color x:Key="Gray900">#212121</Color>
-    <Color x:Key="Gray950">#141414</Color>
+    <Color x:Key="Primary">#00b207</Color>
+    <Color x:Key="Secondary">#84d187</Color>
+    <Color x:Key="Tertiary">#2c742f</Color>
+    <Color x:Key="White">#fff</Color>
+    <Color x:Key="Black">#000</Color>
+    <Color x:Key="Gray100">#e5e5e5</Color>
+    <Color x:Key="Gray200">#cccccc</Color>
+    <Color x:Key="Gray300">#b2b2b2</Color>
+    <Color x:Key="Gray400">#999999</Color>
+    <Color x:Key="Gray500">#808080</Color>
+    <Color x:Key="Gray600">#666666</Color>
+    <Color x:Key="Gray900">#333333</Color>
+    <Color x:Key="Gray950">#1a1a1a</Color>
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
     <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>
     <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}"/>
@@ -30,6 +30,16 @@
     <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
     <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
+
+    <Color x:Key="PrimaryTextColorLight">#212121</Color>
+    <Color x:Key="PrimaryTextColorDark">#eeeeee</Color>
+    <Color x:Key="SecondaryTextColorLight">#616161</Color>
+    <Color x:Key="SecondaryTextColorDark">#e0e0e0</Color>
+    <Color x:Key="TertiaryTextColorLight">#424242</Color>
+    <Color x:Key="TertiaryTextColorDark">#bdbdbd</Color>
+
+    <Color x:Key="TextColorOnPrimaryLight">#EEEEEE</Color>
+    <Color x:Key="TextColorOnPrimaryDark">#212121</Color>
 
     <Color x:Key="Yellow100Accent">#F7B548</Color>
     <Color x:Key="Yellow200Accent">#FFD590</Color>

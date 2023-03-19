@@ -84,5 +84,5 @@ csharp_style_expression_bodied_lambdas = true:silent
 csharp_style_expression_bodied_local_functions = false:silent
 csharp_style_throw_expression = true:suggestion
 csharp_space_around_binary_operators = before_and_after
-csharp_space_between_method_declaration_name_and_open_parenthesis = true
-csharp_new_line_before_open_brace = types,methods,properties,control_blocks
+csharp_space_between_method_declaration_name_and_open_parenthesis = false
+csharp_new_line_before_open_brace = types,methods,properties,anonymous_methods,control_blocks

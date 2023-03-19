@@ -61,6 +61,24 @@ namespace LearnCommerce.Resources.Strings {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Learn Commerce.
+        /// </summary>
+        internal static string BrandName {
+            get {
+                return ResourceManager.GetString("BrandName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter search term.
+        /// </summary>
+        internal static string Home_EnterSearchTerm {
+            get {
+                return ResourceManager.GetString("Home_EnterSearchTerm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Don&apos;t have an account? .
         /// </summary>
         internal static string Login_DontHaveAccount {
@@ -84,6 +102,15 @@ namespace LearnCommerce.Resources.Strings {
         internal static string Login_Password {
             get {
                 return ResourceManager.GetString("Login_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A password is required..
+        /// </summary>
+        internal static string Login_Password_Required {
+            get {
+                return ResourceManager.GetString("Login_Password_Required", resourceCulture);
             }
         }
         
@@ -120,6 +147,15 @@ namespace LearnCommerce.Resources.Strings {
         internal static string Login_UserName {
             get {
                 return ResourceManager.GetString("Login_UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A username is required..
+        /// </summary>
+        internal static string Login_Username_Required {
+            get {
+                return ResourceManager.GetString("Login_Username_Required", resourceCulture);
             }
         }
         

@@ -2,14 +2,14 @@
  * Copyright (c) Learn MS NET, All Rights Reserved.
  * Author: Sam MacDonald - omacdon@learnmsnet.com
  * Created: 2/21/2023
- * Modified: 3/1/2023
+ * Modified: 3/11/2023
  */
 
 namespace Microsoft.Maui.Hosting;
 
 public static class BuilderExtensions
 {
-    public static MauiAppBuilder ConfigureServices (
+    public static MauiAppBuilder ConfigureServices(
         this MauiAppBuilder builder)
     {
         builder.Services.AddSingleton<IDialogService, DialogService>();
@@ -33,14 +33,16 @@ public static class BuilderExtensions
         return builder;
     }
 
-    public static MauiAppBuilder ConfigureViewModels (
+    public static MauiAppBuilder ConfigureViewModels(
         this MauiAppBuilder builder)
     {
         builder.Services.AddTransient<OnBoardingViewModel>();
+        builder.Services.AddTransient<LoginViewModel>();
+
         return builder;
     }
 
-    public static MauiAppBuilder ConfigurePages (
+    public static MauiAppBuilder ConfigurePages(
         this MauiAppBuilder builder)
     {
         builder.Services.AddTransient<OnBoardingPage>();

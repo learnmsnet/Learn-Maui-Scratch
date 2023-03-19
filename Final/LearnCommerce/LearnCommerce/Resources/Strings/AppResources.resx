@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BrandName" xml:space="preserve">
+    <value>Learn Commerce</value>
+  </data>
+  <data name="Home_EnterSearchTerm" xml:space="preserve">
+    <value>Enter search term</value>
+  </data>
   <data name="Login_DontHaveAccount" xml:space="preserve">
     <value>Don't have an account? </value>
   </data>
@@ -125,6 +131,9 @@
   </data>
   <data name="Login_Password" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="Login_Password_Required" xml:space="preserve">
+    <value>A password is required.</value>
   </data>
   <data name="Login_RememberMe" xml:space="preserve">
     <value>Keep me logged In</value>
@@ -137,6 +146,9 @@
   </data>
   <data name="Login_UserName" xml:space="preserve">
     <value>Email address</value>
+  </data>
+  <data name="Login_Username_Required" xml:space="preserve">
+    <value>A username is required.</value>
   </data>
   <data name="Login_Welcome" xml:space="preserve">
     <value>Sign in to your account</value>

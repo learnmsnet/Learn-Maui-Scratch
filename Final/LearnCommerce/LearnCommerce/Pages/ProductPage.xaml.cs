@@ -1,18 +1,16 @@
 /*
  * Copyright (c) Learn MS NET, All Rights Reserved.
  * Author: Sam MacDonald - omacdon@learnmsnet.com
- * Created: 2/28/2023
- * Modified: 3/11/2023
+ * Created: 3/15/2023
+ * Modified: 3/15/2023
  */
 
 namespace LearnCommerce.Pages;
 
-public partial class LoginPage : ContentPage
+public partial class ProductPage : ContentPage
 {
-    public LoginPage(
-        LoginViewModel viewModel)
+    public ProductPage()
     {
-        BindingContext = viewModel;
         InitializeComponent();
     }
 }
